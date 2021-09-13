@@ -28,8 +28,8 @@ public class RandScene : MonoBehaviour
     {
         if (SceneManager.sceneCountInBuildSettings > SceneManager.GetActiveScene().buildIndex + 1)
         {
-            _scene = _levels[Random.Range(0, _levels.Length)];
-            // changing scene based on the number given by randomizer
+            _scene =  _levels.Length;
+            // changing scene based on the number 
             SceneManager.LoadScene(_scene);
             // on click, going to a specific scene
             Debug.Log(_scene);
