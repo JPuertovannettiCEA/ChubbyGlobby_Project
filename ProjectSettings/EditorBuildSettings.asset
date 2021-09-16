@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Scene.unity
     guid: e97fd661fd66be743a3197d09e02710d
   - enabled: 1
-    path: Assets/Scenes/Instruction Scene.unity
-    guid: bc12103a9705747489c312c590e01a58
+    path: Assets/Scenes/Main Game Screen.unity
+    guid: 8ef76101008a9524898682ea63e3f35c
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Game Over Scene.unity
+    guid: 50d0b22e20abdca448ebad9826ce88d0
+  - enabled: 1
+    path: Assets/Scenes/Instruction Scene.unity
+    guid: bc12103a9705747489c312c590e01a58
   m_configObjects: {}

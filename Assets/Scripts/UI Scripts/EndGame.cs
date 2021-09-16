@@ -13,11 +13,8 @@ public class EndGame : MonoBehaviour
     }
 
     public void HandleMouseClick()
-    {
-        if (SceneManager.sceneCountInBuildSettings > SceneManager.GetActiveScene().buildIndex + 1)
-        {
-           Application.Quit();
-        }
-
+    {      
+       Application.Quit();
+       Debug.Log("Exited to desktop");        
     }
 }
