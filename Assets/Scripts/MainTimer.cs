@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainTimer : MonoBehaviour
 {
@@ -55,6 +56,11 @@ public class MainTimer : MonoBehaviour
             float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
             _timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+
+        if(timer <= 0f)
+        {
+            SceneManager.LoadScene("Game Over Scene");
         }
     }
 }

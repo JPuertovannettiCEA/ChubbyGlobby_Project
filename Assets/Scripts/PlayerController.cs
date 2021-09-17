@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,10 +12,13 @@ public class PlayerController : MonoBehaviour
     private bool _isSausage;
     private bool _isStun;
     public Animator _anim;
-    private int _score;
+    public static int _score;
 
     private float _timeBetweenStun = 5f;
     private float _timeSausage = 0.2f;
+
+    [SerializeField]
+    private AudioSource _sfx;
 
     [SerializeField]
     private Text _scoreText;
@@ -44,6 +48,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButtonDown("Fire1") && _isOnMouth == true && _isStun == false)
         {
             _anim.Play("Player_Eat");
+            _sfx.Play();
             Eat();
         } //else if(Input.GetButton("Fire1") && _isOnMouth == true && _isStun == false)
         //{
@@ -56,7 +61,6 @@ public class PlayerController : MonoBehaviour
         //} else if (Input.GetButtonUp("Fire1")) {
           //  _timeSausage = 0.2f;
         //}
-
     }
 
     void Eat()
