@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class RandScene : MonoBehaviour
 {
-      public void Start()
+    public void Start()
     {
         //unlocks cursour 
         Cursor.lockState = Cursor.lockState = CursorLockMode.None;
@@ -14,12 +14,15 @@ public class RandScene : MonoBehaviour
 
     public void ButtonMoveScene(string level)
     {
+        NextScene();
         SceneManager.LoadScene(level);
     }
-
     
-
-   
+    IEnumerator NextScene()
+    {
+        yield return new WaitForSeconds(3);
+        
+    }
 
 
 }
